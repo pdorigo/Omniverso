@@ -16,7 +16,7 @@ src="https://www.facebook.com/tr?id=1120541794236719&ev=PageView&noscript=1"
 /></noscript>
 
   <script>
-  fetch('/API/meta-event', {
+  fetch('/api/meta-event', {
     method: 'POST',
     headers: {'Content-Type':'application/json'},
     body: JSON.stringify({ eventName: 'PageView' })
@@ -25,7 +25,7 @@ src="https://www.facebook.com/tr?id=1120541794236719&ev=PageView&noscript=1"
   document.addEventListener('click', function(e){
     const btn = e.target.closest('a, button');
     if(btn && btn.textContent.toLowerCase().includes('comprar por 47')){
-      fetch('/API/meta-event', {
+      fetch('/api/meta-event', {
         method: 'POST',
         headers: {'Content-Type':'application/json'},
         body: JSON.stringify({ eventName: 'InitiateCheckout' })
